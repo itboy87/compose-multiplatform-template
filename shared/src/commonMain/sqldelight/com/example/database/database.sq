@@ -1,0 +1,19 @@
+CREATE TABLE IF NOT EXISTS TestTable (
+id INTEGER PRIMARY KEY AUTOINCREMENT,
+value TEXT  NOT NULL
+);
+
+
+selectAllData:
+SELECT *
+FROM TestTable;
+
+selectData:
+SELECT *
+FROM TestTable WHERE value = ?;
+
+insertData:
+INSERT OR REPLACE INTO TestTable(value) VALUES ?;
+
+deleteDataByTitle:
+DELETE FROM TestTable WHERE value = ?;

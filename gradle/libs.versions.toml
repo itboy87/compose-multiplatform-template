@@ -15,12 +15,21 @@ composeImageLoader = "1.6.4"
 napier = "2.6.1"
 kotlinx-coroutines = "1.7.3"
 ktor = "2.3.3"
+okhttp = "4.11.0"
 composeIcons = "1.1.0"
 kotlinx-serialization = "1.5.1"
+ktor_version = "2.3.3"
 kotlinx-datetime = "0.4.0"
-koin = "3.4.3"
+koin-version = "3.4.3"
+koin-android-version = "3.4.3"
+koin-compose-androidx-version = "3.4.6"
+koin-compose-version = "1.0.4"
+
 sqlDelight = "2.0.0"
 coreKtx = "1.10.1"
+datastore-version = "1.1.0-alpha04"
+
+moko-resources-version = "0.23.0"
 
 [libraries]
 
@@ -34,15 +43,29 @@ napier = { module = "io.github.aakira:napier", version.ref = "napier" }
 kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlinx-coroutines" }
 kotlinx-coroutines-android = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "kotlinx-coroutines" }
 ktor-core = { module = "io.ktor:ktor-client-core", version.ref = "ktor" }
+ktor-client-logging = { module = "io.ktor:ktor-client-logging", version.ref = "ktor_version" }
 ktor-client-darwin = { module = "io.ktor:ktor-client-darwin", version.ref = "ktor" }
 ktor-client-okhttp = { module = "io.ktor:ktor-client-okhttp", version.ref = "ktor" }
+okhttp-loggingInterceptor = { module = "com.squareup.okhttp3:logging-interceptor", version.ref = "okhttp" }
 composeIcons-fontAwesome = { module = "br.com.devsrsouza.compose.icons:font-awesome", version.ref = "composeIcons" }
+ktor-serialization-json = { module = "io.ktor:ktor-serialization-kotlinx-json", version.ref = "ktor_version" }
+ktor-contentnegotiation = { module = "io.ktor:ktor-client-content-negotiation", version.ref = "ktor_version" }
 kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinx-serialization" }
 kotlinx-datetime = { module = "org.jetbrains.kotlinx:kotlinx-datetime", version.ref = "kotlinx-datetime" }
-koin-core = { module = "io.insert-koin:koin-core", version.ref = "koin" }
+
+koin-core = { module = "io.insert-koin:koin-core", version.ref = "koin-version" }
+koin-android = { module = "io.insert-koin:koin-android", version.ref = "koin-android-version" }
+koin-compose-androidx = { module = "io.insert-koin:koin-androidx-compose", version.ref = "koin-compose-androidx-version" }
+koin-compose = { module = "io.insert-koin:koin-compose", version.ref = "koin-compose-version" }
+
 sqlDelight-driver-sqlite = { module = "app.cash.sqldelight:sqlite-driver", version.ref = "sqlDelight" }
 sqlDelight-driver-android = { module = "app.cash.sqldelight:android-driver", version.ref = "sqlDelight" }
 sqlDelight-driver-native = { module = "app.cash.sqldelight:native-driver", version.ref = "sqlDelight" }
+sqlDelight-coroutinesExtension = { module = "app.cash.sqldelight:coroutines-extensions", version.ref = "sqlDelight" }
+datastore = { module = "androidx.datastore:datastore-preferences-core", version.ref = "datastore-version" }
+
+mokoResources = { module = "dev.icerock.moko:resources", version.ref = "moko-resources-version" }
+mokoResources-compose = { module = "dev.icerock.moko:resources-compose", version.ref = "moko-resources-version" }
 
 [plugins]
 
@@ -53,3 +76,4 @@ android-application = { id = "com.android.application", version.ref = "agp" }
 android-library = { id = "com.android.library", version.ref = "agp" }
 kotlinx-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
 sqlDelight = { id = "app.cash.sqldelight", version.ref = "sqlDelight" }
+mokoResources = { id = "dev.icerock.mobile.multiplatform-resources", version.ref = "moko-resources-version" }
