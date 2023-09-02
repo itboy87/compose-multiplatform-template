@@ -3,7 +3,7 @@ plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.compose)
     alias(libs.plugins.kotlinx.serialization)
-//    alias(libs.plugins.sqlDelight)
+    alias(libs.plugins.sqlDelight)
     alias(libs.plugins.libres)
 }
 
@@ -23,8 +23,9 @@ kotlin {
     ).forEach { iosTarget ->
         iosTarget.binaries.framework {
             baseName = "shared"
-            isStatic = true
+            isStatic = false
             binaryOption("bundleId", "com.myapplication")
+//            linkerOpts.add("-lsqlite3")
         }
     }
     sourceSets {
@@ -51,7 +52,7 @@ kotlin {
                 implementation(libs.napier)
                 implementation(libs.composeIcons.fontAwesome)
                 implementation(libs.datastore)
-//                implementation(libs.sqlDelight.coroutinesExtension)
+                implementation(libs.sqlDelight.coroutinesExtension)
                 implementation(libs.libres)
             }
         }
@@ -60,7 +61,7 @@ kotlin {
                 api(libs.androidx.activityCompose)
                 api(libs.androidx.appcompat)
                 api(libs.androidx.coreKtx)
-//                implementation(libs.sqlDelight.driver.android)
+                implementation(libs.sqlDelight.driver.android)
                 implementation(libs.ktor.client.okhttp)
                 implementation(libs.okhttp.loggingInterceptor)
             }
@@ -68,7 +69,7 @@ kotlin {
         val desktopMain by getting {
             dependencies {
                 implementation(compose.desktop.common)
-//                implementation(libs.sqlDelight.driver.sqlite)
+                implementation(libs.sqlDelight.driver.sqlite)
                 implementation(libs.ktor.client.okhttp)
                 implementation(libs.okhttp.loggingInterceptor)
             }
@@ -83,7 +84,7 @@ kotlin {
             iosSimulatorArm64Main.dependsOn(this)
             dependencies {
                 implementation(libs.ktor.client.darwin)
-//                implementation(libs.sqlDelight.driver.native)
+                implementation(libs.sqlDelight.driver.native)
             }
         }
     }
@@ -109,11 +110,10 @@ android {
     }
 }
 
-/*
 sqldelight {
     databases {
         create("AppDatabase") {
             packageName.set("com.example.database")
         }
     }
-}*/
+}

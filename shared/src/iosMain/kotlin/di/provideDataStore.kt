@@ -2,7 +2,6 @@ package di
 
 import androidx.datastore.core.DataStore
 import androidx.datastore.preferences.core.Preferences
-import com.example.database.AppDatabase
 import createDataStore
 import dataStoreFileName
 import kotlinx.cinterop.ExperimentalForeignApi

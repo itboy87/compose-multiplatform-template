@@ -1,8 +1,6 @@
 package di
 
 import helper.DataStoreHelper
-import helper.DatabaseHelper
-import createDatabase
 import io.ktor.client.HttpClient
 import io.ktor.client.engine.HttpClientEngine
 import io.ktor.client.plugins.HttpRequestRetry
@@ -47,9 +45,9 @@ fun getDataModule(
 
     single { DataStoreHelper(get()) }
 
-    single { createDatabase(get()) }
+//    single { createDatabase(get()) }
 
-    single { DatabaseHelper(get()) }
+//    single { DatabaseHelper(get()) }
 
 }
 

@@ -14,6 +14,9 @@ import ui.screens.LoginScreen
 @Composable
 fun App() {
     AppTheme {
+        Text("Testing...")
+    }
+    /*AppTheme {
         val navigator = rememberNavigator()
         NavHost(navigator = navigator, initialRoute = "/login") {
             scene("/") {
@@ -35,7 +38,7 @@ fun App() {
         }
 //        AsyncImage("https://picsum.photos/200/300")
         //        val dataStore = koinInject<DataStore<Preferences>>()
-        /*var greetingText by remember { mutableStateOf("Hello, World!") }
+        *//*var greetingText by remember { mutableStateOf("Hello, World!") }
         var showImage by remember { mutableStateOf(false) }
         Column(Modifier.fillMaxWidth(), horizontalAlignment = Ali   gnment.CenterHorizontally) {
             Button(onClick = {
@@ -50,6 +53,6 @@ fun App() {
                     null
                 )
             }
-        }*/
-    }
+        }*//*
+    }*/
 }

@@ -1,10 +1,13 @@
 <?xml version="1.0"?>
 <resources>
-    <string name="log_in_with_your_goolge_account_note">Log in with your Google account to save your settings, your channels, your favorites and your bookmarks, keep them synchronized on all your devices and not lose them if you reinstall the app.</string>
+    <string name="log_in_with_your_goolge_account_note">Log in with your Google account to save your
+        settings, your channels, your favorites and your bookmarks, keep them synchronized on all
+        your devices and not lose them if you reinstall the app.
+    </string>
     <string name="continue_without_account">Continue without account</string>
     <string name="login_with_google">login with google</string>
     <string name="or">OR</string>
     <string name="continue_without_login">Continue without login</string>
-    <string name="declare_to_accept">By continuing you declare to accept the </string>
+    <string name="declare_to_accept">By continuing you declare to accept the</string>
     <string name="terms_of_services">Terms of services</string>
 </resources>
