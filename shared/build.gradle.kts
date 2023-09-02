@@ -25,7 +25,6 @@ kotlin {
             baseName = "shared"
             isStatic = false
             binaryOption("bundleId", "com.myapplication")
-//            linkerOpts.add("-lsqlite3")
         }
     }
     sourceSets {
