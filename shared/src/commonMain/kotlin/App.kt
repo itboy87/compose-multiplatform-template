@@ -1,22 +1,15 @@
 import androidx.compose.foundation.clickable
-import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
-import androidx.compose.material.darkColors
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import moe.tlaster.precompose.navigation.NavHost
 import moe.tlaster.precompose.navigation.NavOptions
 import moe.tlaster.precompose.navigation.rememberNavigator
-import org.jetbrains.compose.resources.ExperimentalResourceApi
 import ui.screens.LoginScreen
 
 @Composable
 fun App() {
     AppTheme {
-        Text("Testing...")
-    }
-    /*AppTheme {
         val navigator = rememberNavigator()
         NavHost(navigator = navigator, initialRoute = "/login") {
             scene("/") {
@@ -36,23 +29,23 @@ fun App() {
                 LoginScreen()
             }
         }
+    }
 //        AsyncImage("https://picsum.photos/200/300")
-        //        val dataStore = koinInject<DataStore<Preferences>>()
-        *//*var greetingText by remember { mutableStateOf("Hello, World!") }
-        var showImage by remember { mutableStateOf(false) }
-        Column(Modifier.fillMaxWidth(), horizontalAlignment = Ali   gnment.CenterHorizontally) {
-            Button(onClick = {
-                greetingText = "Hello, ${getPlatformName()}"
-                showImage = !showImage
-            }) {
-                Text(greetingText)
-            }
-            AnimatedVisibility(showImage) {
-                Image(
-                    painterResource("compose-multiplatform.xml"),
-                    null
-                )
-            }
-        }*//*
+    //        val dataStore = koinInject<DataStore<Preferences>>()
+    /*var greetingText by remember { mutableStateOf("Hello, World!") }
+    var showImage by remember { mutableStateOf(false) }
+    Column(Modifier.fillMaxWidth(), horizontalAlignment = Ali   gnment.CenterHorizontally) {
+        Button(onClick = {
+            greetingText = "Hello, ${getPlatformName()}"
+            showImage = !showImage
+        }) {
+            Text(greetingText)
+        }
+        AnimatedVisibility(showImage) {
+            Image(
+                painterResource("compose-multiplatform.xml"),
+                null
+            )
+        }
     }*/
 }
