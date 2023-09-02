@@ -1,27 +1,39 @@
-import androidx.compose.animation.AnimatedVisibility
-import androidx.compose.foundation.Image
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.material.Button
+import androidx.compose.foundation.clickable
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
+import androidx.compose.material.darkColors
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
-import androidx.compose.runtime.setValue
-import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import com.myapplication.MR
-import dev.icerock.moko.resources.compose.stringResource
+import androidx.compose.ui.graphics.Color
+import moe.tlaster.precompose.navigation.NavHost
+import moe.tlaster.precompose.navigation.NavOptions
+import moe.tlaster.precompose.navigation.rememberNavigator
 import org.jetbrains.compose.resources.ExperimentalResourceApi
-import org.jetbrains.compose.resources.painterResource
+import ui.screens.LoginScreen
 
-@OptIn(ExperimentalResourceApi::class)
 @Composable
 fun App() {
-    MaterialTheme {
-        AsyncImage("https://picsum.photos/200/300")
+    AppTheme {
+        val navigator = rememberNavigator()
+        NavHost(navigator = navigator, initialRoute = "/login") {
+            scene("/") {
+                Text(
+                    "Home",
+                    modifier = Modifier.clickable {
+                        navigator.navigate(
+                            "/login",
+                            NavOptions(launchSingleTop = true)
+                        )
+                    })
+            }
+            scene("/settings") {
+                Text("Settings")
+            }
+            scene("/login") {
+                LoginScreen()
+            }
+        }
+//        AsyncImage("https://picsum.photos/200/300")
         //        val dataStore = koinInject<DataStore<Preferences>>()
         /*var greetingText by remember { mutableStateOf("Hello, World!") }
         var showImage by remember { mutableStateOf(false) }
@@ -41,5 +53,3 @@ fun App() {
         }*/
     }
 }
-
-expect fun getPlatformName(): String

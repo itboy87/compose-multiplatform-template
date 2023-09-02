@@ -29,7 +29,7 @@ sqlDelight = "2.0.0"
 coreKtx = "1.10.1"
 datastore-version = "1.1.0-alpha04"
 
-moko-resources-version = "0.23.0"
+libres-version = "1.2.0-beta01"
 precompose-version = "1.5.0"
 
 [libraries]
@@ -64,8 +64,7 @@ sqlDelight-driver-native = { module = "app.cash.sqldelight:native-driver", versi
 sqlDelight-coroutinesExtension = { module = "app.cash.sqldelight:coroutines-extensions", version.ref = "sqlDelight" }
 datastore = { module = "androidx.datastore:datastore-preferences-core", version.ref = "datastore-version" }
 
-mokoResources = { module = "dev.icerock.moko:resources", version.ref = "moko-resources-version" }
-mokoResources-compose = { module = "dev.icerock.moko:resources-compose", version.ref = "moko-resources-version" }
+libres = { module = "io.github.skeptick.libres:libres-compose", version.ref = "libres-version" }
 
 voyager-navigator = { module = "cafe.adriel.voyager:voyager-navigator", version.ref = "voyager" }
 precompose = { module = "moe.tlaster:precompose", version.ref = "precompose-version" }
@@ -81,4 +80,4 @@ android-application = { id = "com.android.application", version.ref = "agp" }
 android-library = { id = "com.android.library", version.ref = "agp" }
 kotlinx-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
 sqlDelight = { id = "app.cash.sqldelight", version.ref = "sqlDelight" }
-mokoResources = { id = "dev.icerock.mobile.multiplatform-resources", version.ref = "moko-resources-version" }
+libres = { id = "io.github.skeptick.libres", version.ref = "libres-version" }

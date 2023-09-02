@@ -1,10 +1,11 @@
 import androidx.compose.desktop.ui.tooling.preview.Preview
 import androidx.compose.runtime.Composable
-
-@Composable fun MainView() = App()
+import ui.screens.LoginScreen
 
 @Preview
 @Composable
-fun AppPreview() {
-    App()
+fun loginScreenPreview() {
+    AppTheme {
+        LoginScreen()
+    }
 }
